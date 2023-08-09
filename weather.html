@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css">
+
+</head>
+<body>
+    <div class="title">
+        <h2>Find your </h2>
+        <h2>City</h2>
+        <h1>Weather</h1>
+    </div>
+    <div class="cityinput">
+        <input type="text" id="cityname" spellcheck="false" placeholder="enter city name">
+        <button class="ipbtn" id="btn">Find</button>
+    </div>
+
+    <div class="display hidden" id="dis">
+           
+       <table>
+        
+        <tr>
+            <td>City</td>
+            <td>:</td>
+            <td id="city">45</td>
+        </tr>
+
+        <tr>
+            <td>Temperature</td>
+            <td>:</td>
+            <td id="temp">45</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td>:</td>
+            <td id="humi"> 88</td>
+        </tr>
+        <tr>
+            <td>Wind Speed</td>
+            <td>:</td>
+            <td id="wind">909</td>
+        </tr>
+        <tr>
+            <td>Climate</td>
+            <td>:</td>
+            <td id="climate">rainy</td>
+        </tr>
+
+
+       </table> 
+
+    </div>
+    <div class="error hidden"  id="error">
+        <h2>Error! City not found..</h2>
+        <img src="img/opps.png" alt="">
+    </div>
+
+    <div class="footer">
+        <h4>Powered by </h4>
+        <p>Luckylad65</p>
+    </div>
+
+    </div>
+    <script src="weather.js"></script>
+</body>
+
+</html>

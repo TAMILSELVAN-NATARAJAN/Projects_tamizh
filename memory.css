@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+  background-color: rgb(250, 171, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container
+{
+    border-radius: 6px;
+    background-color:rgb(255, 209, 109);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .title{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   position: relative;
+   top: -10px;
+}
+
+
+.btn button
+{
+   
+    outline: none;
+    border: none;
+    background-color:rgb(255, 255, 255) ;
+    color:black;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.btn{
+    position: relative;
+    bottom: -70px;
+}
+
+.boxes
+{
+    display: flex;
+    flex-wrap: wrap;
+   width: 480px;
+   height: 400px;
+   gap: 10px; 
+   justify-content: center;
+   align-items: center;  
+   transform-style: preserve-3d;
+   perspective: 500px;
+}
+.item
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    background-color: aliceblue;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    border-radius: 6px;
+
+}
+.item:after
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(250, 171, 0);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility:hidden ;
+    border-radius: 6px;
+}
+.item .boxopen{
+    transform: rotateY(0deg);
+}
+
+
+.boxmatch::after, .boxopen:after
+{
+transform: rotatey(180deg);
+}
+
+.footer
+{
+    position: absolute;
+    top: 95%;
+    font-size: 15px;
+    font-style: oblique;
+    color: black;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 516px) {
+    .container
+{
+    background-color:rgb(255, 209, 109);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.item
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+   
+}
+
+.boxes
+{
+    display: flex;
+    flex-wrap: wrap;
+   width: 280px;
+   height: 260px;
+   gap: 10px; 
+   justify-content: center;
+   align-items: center;  
+   transform-style: preserve-3d;
+   perspective: 500px;
+}
+
+.footer{
+    position: absolute;
+    top: 90%;
+    font-size: 15px;
+    font-style: oblique;
+    color: black;
+    opacity: 0.7;
+}
+
+.btn{
+    position: relative;
+    bottom: -40px;
+}
+.container .title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    top: -60px;
+ }
+}
